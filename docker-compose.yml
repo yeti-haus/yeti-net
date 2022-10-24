@@ -3,7 +3,7 @@ services:
     image: ethereum/client-go
     volumes:
       - .chaindata:/root
-    command: --datadir /root/client --bootnodes enode://2941ac170b7d21a044b9737473b5956359059ca7863916303440031ca3512ddf3fd723084976e31e4976b4fdd2866baaebc2165d4b247143e69d6cbd091175ab@137.184.162.37:30303  --syncmode full --ws --ws.addr 0.0.0.0 --http --http.addr 0.0.0.0
+    command: --datadir /root/client --bootnodes enode://7e9fbc824cedc4023c28d8ecf6592d59f92016c7bd085eb4e0c69c21d0fa88d85361c33749178d008d219d5e800bd95707995dd1278dc578804a71cf6e8f6d0d@137.184.162.37:30303  --syncmode full --ws --ws.addr 0.0.0.0 --http --http.addr 0.0.0.0
     ports:
       - "8555:8545"
       - "8556:8546"
@@ -12,4 +12,4 @@ services:
     image: ethereum/client-go
     volumes:
       - .chaindata:/root
-    command: --datadir /root/miner --bootnodes enode://2941ac170b7d21a044b9737473b5956359059ca7863916303440031ca3512ddf3fd723084976e31e4976b4fdd2866baaebc2165d4b247143e69d6cbd091175ab@137.184.162.37:30303  --syncmode full --mine --miner.threads=1 --miner.etherbase=$SIGNER --unlock "$SIGNER" --password "/root/password.key"
+    command: --datadir /root/miner --bootnodes enode://7e9fbc824cedc4023c28d8ecf6592d59f92016c7bd085eb4e0c69c21d0fa88d85361c33749178d008d219d5e800bd95707995dd1278dc578804a71cf6e8f6d0d@137.184.162.37:30303  --syncmode full --mine --miner.threads=1 --miner.etherbase=$SIGNER --unlock "$SIGNER" --password "/root/password.key"
