@@ -1,0 +1,5 @@
+.chaindata
+.env
+.vscode
+
+node_modules
